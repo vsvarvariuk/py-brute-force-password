@@ -33,7 +33,7 @@ def check_password_range(start: int, end: int) -> List[str]:
     return passwords_found
 
 
-def main_multiprocess_executor(in_numbers: Sequence[int]) -> None:
+def main_multiprocess_executor() -> None:
     chunk_size = 500_000
     total = 100_000_000
     futures = []
@@ -53,7 +53,7 @@ def main_multiprocess_executor(in_numbers: Sequence[int]) -> None:
 
 if __name__ == "__main__":
     start_time = time.perf_counter()
-    main_multiprocess_executor(range(100_000_000))
+    main_multiprocess_executor()
     end_time = time.perf_counter()
     print(f"Elapsed time: {end_time - start_time} seconds")
 
